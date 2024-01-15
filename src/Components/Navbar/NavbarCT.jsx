@@ -5,21 +5,21 @@ import React from 'react';
 function Navbar() {
   return (
     <div className="navbarct">
-      <Link to='/'><span className="design-by">Design By </span></Link>
+      <a href="/"><span className="design-by">Design By </span></a>
       <div className="nav-list">
         <GsapMagnetic>
           <div className="magnetnav">
-            <span><Link to='about'>About</Link></span>
+            <span><a href="/about">About</a></span>
           </div>
         </GsapMagnetic>
         <GsapMagnetic>
           <div className="magnetnav">
-            <span><Link to='project'>Resume</Link></span>
+            <span><a href="/project">Resume</a></span>
           </div>
         </GsapMagnetic>
         <GsapMagnetic>
           <div className="magnetnav">
-            <span><Link to='contact'>Contact</Link></span>
+            <span><a href="/contact">Contact</a></span>
           </div>
         </GsapMagnetic>
       </div>
