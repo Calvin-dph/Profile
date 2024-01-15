@@ -1,4 +1,14 @@
 .forms{
+    opacity: 0.5;
+    pointer-events: none;
+}
+.forms h1{
+    position: relative;
+    font-size: 50px;
+}
+
+
+.forms{
     display: block;
     width: 73%;
     order: 2;
@@ -92,5 +102,9 @@
     }
     .form{
         width: auto;
+    }
+    .forms h1{
+        position: relative;
+        font-size: 30px;
     }
 }
