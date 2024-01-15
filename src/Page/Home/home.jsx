@@ -22,7 +22,7 @@ function Home(){
 
   return(
     <>
-    {/* <Preloader/> */}
+    <Preloader/>
     <div className="main">
       <Navbar/>
       <Burgerbar homeBox={homeBox}/>
