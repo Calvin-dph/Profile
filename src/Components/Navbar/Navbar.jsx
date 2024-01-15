@@ -1,9 +1,13 @@
 import GsapMagnetic from '../GsapMagnetic'
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+
 
 function Navbar() {
   return (
     <div className="navbar">
+      <NavLink to="/">test</NavLink>
+      <NavLink to="/about">testabout</NavLink>
       <a href="/"><span className="design-by">Design By </span></a>
       <div className="nav-list">
         <GsapMagnetic>
