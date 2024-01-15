@@ -1,0 +1,28 @@
+.cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.work{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 100px 50px 100px;
+    border-bottom: 1px solid rgb(201, 201, 201);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.work h2, p{
+    transition: all 0.2s;
+}
+.work:hover{
+    opacity: 0.4;
+}
+.work:hover h2{
+    transform: translateX(-10px);
+}
+.work:hover p{
+    transform: translateX(10px);
+}

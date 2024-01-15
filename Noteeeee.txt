@@ -1,0 +1,11 @@
+Navbar
+logo     about project contact
+
+About 
+about skill education dll
+
+Nice to meet you I'm Sebastian, a multi-disciplinary designer from Germany based in Tokyo. I can't really show much of what I’m working on, but it has to do with cars, software and urban development. The site you see here is more meant to be a playground for the stuff I do besides my work. Enjoy, have fun and feel free to reach out.
+
+project
+resume portofolio
+

@@ -1,0 +1,113 @@
+.project-container{
+    position: relative;
+    margin: 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    padding: 10px 100px;
+}
+.section{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.col-section{
+    display: flex;
+    flex-direction: column;
+}
+.col-section img{
+    width: 100px;
+    height: 100px;
+}
+.edu{
+    display: flex;
+    margin-bottom: 80px;
+}
+.edu-desc{
+    display: flex;
+    flex-direction: column;
+}
+.edu-desc h4, p, h5, h6{
+    padding: 0;
+    margin: 0;
+}
+.edu-desc h4{
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+.edu-desc h6{
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.edu-desc h5{
+    font-size: 16px;
+    margin-left: 10px;
+    
+}
+.edu-desc strong{
+    margin-top: 50px;
+}
+.edu-desc ul li{
+    padding-top: 10px;
+    font-size: 11px;
+}
+
+/* Work */
+.work-container{
+    margin-top: 100px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+}
+.cont{
+    width: 100%;
+}
+.works{
+    display: flex;
+    width: 80%;
+    padding: 50px 100px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+    transition: all 0.2s linear;
+}
+.works h2{
+    transition: all 0.2s linear;
+    text-transform: uppercase;
+    font-size: 28px;
+}
+.works p{
+    transition: all 0.2s linear;
+}
+.works:hover{
+    opacity: 0.4;
+}
+.works:hover h2{
+    transform: translateX(-10px);
+}
+.works:hover p{
+    transform: translateX(10px);
+}
+
+/* Modal */
+.modal{
+    height: 350px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bot-modal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40vh;
+    margin-top: 50px;
+}

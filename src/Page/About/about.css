@@ -1,0 +1,218 @@
+.about-container{
+    position: relative;
+    margin: 6%;
+}
+.top-about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 200px;
+    margin-bottom: 40px;
+    
+}
+.text-move{
+    font-size: 21px;
+    font-weight: 200;
+    letter-spacing: 5px;
+    margin: 0;
+    padding: 0;
+    color: darkgray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.text-move span{
+    padding-left: 10px;
+    transform: translate(0px, 70px) ;
+}
+.top-about p{
+    text-align: center;
+    font-size: 37px;
+    font-weight: 800;
+    margin-top: 10px;
+    padding: 0px 150px;
+}
+.aboutme{
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    margin: 100px 80px 0px 80px;
+    max-width: 100%;
+}
+.desc{
+    top: calc(100% - 75px);
+    width: 60%;
+    padding-right: 100px;
+}
+.desc h2{
+    font-weight: 200;
+    font-size: 25px;
+    color: darkgray;
+}
+
+.imgwrap{
+    position: relative;
+    top: -200px;
+    width: 100%;
+    height: 140vh;
+    overflow: hidden;
+    border-radius: 20%;
+}
+.imgwrap img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Biodata */
+.bio-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0px;
+    max-width: 100%;
+}
+.title-container{
+    letter-spacing: 3px;
+    color: darkgray;
+    border-bottom: 2px solid black;
+}
+.desc-bio{
+    display: flex;
+    max-width: 100%;
+}
+.desc-bio img{
+    width: 30%;
+}
+.bio-rght{
+    width: 100%;
+    padding: 0px 100px;
+}
+.bio-rght h2{
+    letter-spacing: 1px;
+}
+.bio-rght h3{
+    font-weight: 100;
+}
+.text-bio{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+}
+.col-3{
+    display: flex;
+    flex-direction: column;
+}
+.col-3 ul li{
+    display: flex;
+    padding: 10px;
+}
+.col-3 ul li strong{
+    padding: 0px 10px;
+}
+.col-3 ul li i{
+    padding-top: 2px;
+}
+
+/* skill */
+.skills-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
+}
+.skills-content{
+    display: flex;
+    width: 100%;
+}
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+.progress{
+    width: 100%;
+}
+.skills{
+    width: 50%;
+}
+.skill{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: #45505b;
+}
+.progress-bar {
+    width: 1px;
+    height: 10px;
+    transition: 0.9s;
+    background-color: #0563bb;
+}
+.progress-bar2 {
+    width: 1px;
+    height: 10px;
+    transition: 0.9s;
+    background-color: #0563bb;
+}
+.progress-bar3 {
+    width: 1px;
+    height: 10px;
+    transition: 0.9s;
+    background-color: #0563bb;
+}
+.progress-bar4 {
+    width: 1px;
+    height: 10px;
+    transition: 0.9s;
+    background-color: #0563bb;
+}
+.progress-bar-wrap{
+    padding: 0px 20px;
+
+}
+
+@media screen and (max-width: 768px) {
+    .top-about{
+        margin-top: 60px;
+    }
+    .top-about p{
+        font-size: 20px;
+    }
+    .desc h1{
+        font-size: 14px;
+    }
+    .desc h2{
+        font-size: 18px;
+    }
+    .imgwrap img{
+        height: 100vh;
+        width: auto;
+        position: relative;
+        right: 150px;
+    }
+    .desc-bio img{
+        margin-top: 50px;
+        height: 200px;
+    }
+    .bio-rght{
+        padding: 0px 10px;
+    }
+    .col-3 ul li strong{
+        font-size: 11px;
+    }
+    .col-3 ul li span{
+        font-size: 10px;
+    }
+}
