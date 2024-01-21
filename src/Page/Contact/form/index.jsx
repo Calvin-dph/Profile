@@ -4,10 +4,12 @@ import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { useScroll, useTransform } from "framer-motion";
 import { motion } from "framer-motion";
+import emailjs from '@emailjs/browser';
+import { useState } from 'react';
 
 
 
-export default function index(){
+export default function index({onSend}){
   const timeline = useRef(null);
 
   const formsContainer = useRef(null);
@@ -15,7 +17,7 @@ export default function index(){
     target : formsContainer,
     offset: ["start end", 'end end']
   })
-  const x = useTransform(scrollYProgress, [0, 1], [-300, -100])
+  const x = useTransform(scrollYProgress, [0, 1], [-300, 0])
 
   useEffect(() => {
     timeline.current = gsap.timeline({paused:true})
@@ -31,30 +33,52 @@ export default function index(){
   more.addEventListener("mouseleave", () => timeline.current.play())
   })
 
+
+  // send Email
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs.sendForm('service_altc3r7', 'template_xwyugtq', e.target, '-KjW0yIq1Bo24uqo8')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  }
+
+  const [user_name, setUserName] = useState('');
+  const [user_email, setUserEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const isButtonDisabled = !user_name || !user_email || !message;
+
   return(
   <div ref={formsContainer} className='forms'>
-    <h1>ON PROGRESS</h1>
-    <div className='form'>
-      <h5>01</h5>
-      <label htmlFor="name">What's Your Name?</label>
-      <input className='field' type="text" name="name" id="formname" placeholder="Alif Vio" />
-    </div>
-    <div className='form'>
-      <h5>02</h5>
-      <label htmlFor="email">What's Your Email?</label>
-      <input className='field' type="text" name="email" id="formemail" placeholder="Alif@gmail.com" />
-    </div>
-    <div className='form'>
-      <h5>03</h5>
-      <label htmlFor="name">Your Message</label>
-      <textarea className='field' type="text" name="message" id="formmessage" placeholder="Hi Calvin, can you help with..." />
-    </div>
-    <GsapMagnetic>
-    <motion.div style={{x}} className='btnsend'>
-      <div className='white'></div>
-      <GsapMagnetic><h2>Send</h2></GsapMagnetic>
-    </motion.div>
-    </GsapMagnetic>
+
+    <form ref={form} onSubmit={sendEmail}>
+      <div className='form'>
+        <h5>01</h5>
+        <label htmlFor="name">What's Your Name?</label>
+        <input className='field' type="text" name="user_name" placeholder="Alif Vio" onChange={(e) => setUserName(e.target.value)}/>
+      </div>
+      <div className='form'>
+        <h5>02</h5>
+        <label htmlFor="email">What's Your Email?</label>
+        <input className='field' type="text" name="user_email" placeholder="Alif@gmail.com" onChange={(e) => setUserEmail(e.target.value)}/>
+      </div>
+      <div className='form'>
+        <h5>03</h5>
+        <label htmlFor="name">Your Message</label>
+        <textarea className='field' type="text" name="message" placeholder="Hi Calvin, can you help with..." onChange={(e) => setMessage(e.target.value)}/>
+      </div>
+      <GsapMagnetic>
+      <motion.div style={{x}} className='btnsend'>
+        <div className='white'></div>
+        <GsapMagnetic><input className='inputbtn' type="submit" value="Send" onClick={onSend}  disabled={isButtonDisabled}></input></GsapMagnetic>
+      </motion.div>
+      </GsapMagnetic>
+    </form>
+    
   </div>
   )
 }

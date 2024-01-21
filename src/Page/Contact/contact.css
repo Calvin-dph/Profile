@@ -15,6 +15,22 @@
     color: white;
 }
 
+.popup-active{
+    display: flex;
+}
+.popup{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    z-index: 100;
+}
+
 @media screen and (max-width: 768px) {
     .contact-container{
         flex-direction: column-reverse;
