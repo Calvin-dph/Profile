@@ -31,7 +31,7 @@ function Contact(){
 
   return(
     <div className="main-contact">
-      {/* <PrepageCT/> */}
+      <PrepageCT/>
       <NavbarCT/>
       <Burgerbar homeBox={homeBox}/>
       <Maps/>
